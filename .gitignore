@@ -1,0 +1,43 @@
+# === Global ===
+*.log
+*.tmp
+*.swp
+*.DS_Store
+Thumbs.db
+.env
+.env.*
+.vscode/
+.idea/
+*.iml
+*.class
+*.jar
+*.war
+*.zip
+*.tar
+*.gz
+
+# === Angular / Frontend ===
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.angular/cache/
+/frontend/coverage/
+/frontend/.tmp/
+/frontend/package-lock.json
+
+# === Spring Boot / Backend ===
+/backend/target/
+/backend/bin/
+/backend/build/
+/backend/.gradle/
+/backend/.mvn/
+!/backend/.mvn/wrapper/maven-wrapper.jar
+/backend/.mvn/wrapper/maven-wrapper.properties
+/backend/.classpath
+/backend/.project
+/backend/.settings/
+
+# === Common ===
+.cache/
+tmp/
+build/
+out-tsc/
