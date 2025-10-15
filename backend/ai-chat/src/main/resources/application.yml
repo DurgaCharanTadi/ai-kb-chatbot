@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+app:
+  aws:
+    region: us-east-1  # change to where your KB lives
+    # You can optionally set defaults to avoid sending in every request
+    defaultKnowledgeBaseId: BDXZRRARNT   # e.g. kb-xxxxxxxxxxxxxxxxx
+    defaultModelArn: arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-haiku-20240307-v1:0     # e.g. arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-5-sonnet-20240620-v1:0
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

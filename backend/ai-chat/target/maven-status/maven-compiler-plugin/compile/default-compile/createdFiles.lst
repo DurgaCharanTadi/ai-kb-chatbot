@@ -1,0 +1,15 @@
+com\dct\kb\ai_chat\StreamLambdaHandler.class
+com\dct\kb\ai_chat\service\BedrockKbService$RetrievedRef.class
+com\dct\kb\ai_chat\service\BedrockKbService.class
+com\dct\kb\ai_chat\web\BedrockKbController$RagRequest.class
+com\dct\kb\ai_chat\web\BedrockKbController$RetrieveRequest.class
+com\dct\kb\ai_chat\config\BedrockClients.class
+com\dct\kb\ai_chat\AiChatApplication.class
+com\dct\kb\ai_chat\web\PingController.class
+com\dct\kb\ai_chat\service\BedrockKbService$RetrieveResult.class
+com\dct\kb\ai_chat\web\BedrockKbController.class
+com\dct\kb\ai_chat\service\BedrockKbService$RetrieveHit.class
+com\dct\kb\ai_chat\service\BedrockKbService$CitationInfo.class
+com\dct\kb\ai_chat\service\BedrockKbService$RagResult.class
+com\dct\kb\ai_chat\config\CorsConfig.class
+com\dct\kb\ai_chat\service\BedrockKbService$RagResult$RagResultBuilder.class
