@@ -27,9 +27,6 @@ Requests flow through the Spring Boot API → AWS Bedrock Knowledge Base → Ama
 
 ![Architecture](docs/architecture-ai-kb-chat.png)
 
-> *(Generated architecture diagram — included below for reference)*  
-> ![Architecture Diagram](A_README_file_in_digital_medium_introduces_"AI-KB-.png)
-
 ---
 
 ## 🧠 Key Highlights
