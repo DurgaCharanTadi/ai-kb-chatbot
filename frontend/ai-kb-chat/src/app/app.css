@@ -1,0 +1,114 @@
+:host {
+  display: block;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #0d47a1;
+  color: #fff;
+}
+#architecture img{
+  width: 90vw;
+}
+.logo {
+  font-size: 1.5rem;
+}
+.nav-links a {
+  margin-left: 1rem;
+  color: #bbdefb;
+  text-decoration: none;
+}
+.nav-links a:hover {
+  text-decoration: underline;
+}
+.landing-container {
+  padding: 0 2rem 2rem 2rem;
+}
+section {
+  margin-top: 2rem;
+}
+h2 {
+  margin-bottom: 0.5rem;
+}
+ul {
+  padding-left: 1.2rem;
+}
+li {
+  margin-bottom: 0.5rem;
+}
+/* === Demo Ribbon (top-right corner) === */
+.demo-ribbon {
+  position: fixed;
+  top: 0;
+  right: -40px;
+  background: #0d47a1;
+  color: white;
+  padding: 8px 60px;
+  transform: rotate(45deg);
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  z-index: 1200;
+  opacity: 0.9;
+}
+
+/* Optional: hide the ribbon on small screens */
+@media (max-width: 600px) {
+  .demo-ribbon {
+    display: none;
+  }
+}
+
+/* === Call-to-action box === */
+.cta-box {
+  margin-top: 1.5rem;
+  background: linear-gradient(90deg, #e3f2fd, #bbdefb);
+  color: #0d47a1;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(13, 71, 161, 0.25);
+  animation: glowPulse 2s infinite ease-in-out;
+}
+
+/* Smooth pulsing glow effect */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(13, 71, 161, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(13, 71, 161, 0.6);
+  }
+}
+
+/* === Disclaimer box (yellow alert style) === */
+.disclaimer-box {
+  background: #fff3cd;
+  border: 1px solid #ffe08a;
+  color: #7a5b00;
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+/* === Headings and layout consistency === */
+h1, h2, h3 {
+  color: #0d47a1;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* Optional: give landing content breathing room */
+.landing-container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}

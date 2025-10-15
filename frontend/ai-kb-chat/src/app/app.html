@@ -1,0 +1,83 @@
+<!-- Header with space for logo and navigation -->
+<header class="app-header">
+  <div class="logo">
+    <img src="https://dct-kb-ai-chatbot.s3.us-east-1.amazonaws.com/app_logo.png"
+         alt="Knowledge Base AI-Chat" width="180px" />
+  </div>
+  <nav class="nav-links">
+    <a href="https://github.com/your-repo-link" target="_blank">
+      <img src="https://dct-kb-ai-chatbot.s3.us-east-1.amazonaws.com/github-mark-white.png"
+           alt="GitHub" width="60px" />
+    </a>
+  </nav>
+</header>
+
+
+<!-- Landing content -->
+<main class="landing-container">
+
+  <!-- Hero / Intro -->
+  <section id="intro">
+    <h1>Knowledge Base AI-Chat</h1>
+    <p>
+      Welcome to the <strong>Codentis AI Chat</strong> — a full-stack web application that showcases
+      how Retrieval-Augmented Generation (RAG) works with
+      <strong>Amazon Bedrock</strong>. The chat panel (bottom-right) can answer
+      questions grounded in a simulated enterprise knowledge base.
+    </p>
+    <p>
+      This demo uses an <strong>Angular 20</strong> frontend and a
+      <strong>Spring Boot</strong> backend integrated with
+      <strong>Bedrock Knowledge Bases</strong> and
+      <strong>S3 Vector storage</strong>.
+    </p>
+
+    <!-- Highlighted instruction -->
+    <div class="cta-box">
+      💬 <strong>Click the chat icon in the lower-right corner to start exploring.</strong>
+    </div>
+  </section>
+
+  <!-- About Codentis (Demo Company) -->
+  <section id="about-codentis">
+    <h2>About Codentis</h2>
+
+    <div class="disclaimer-box">
+      <strong>Disclaimer:</strong>
+      <em>Codentis is a fictional company created solely for demonstration purposes.</em>
+      It does not represent a real organization. All names, data, and financial figures are synthetic
+      and exist to provide realistic context for this AI assistant.
+    </div>
+
+    <p>
+      <strong>Codentis</strong> is a simulated global technology corporation headquartered in
+      Redmond, Washington. It is portrayed as one of the “Big Five” tech companies, developing
+      enterprise software, cloud infrastructure, and artificial-intelligence solutions.
+      The company’s narrative was designed to support realistic queries and responses
+      for this AI knowledge-base chatbot.
+    </p>
+
+    <h3>Key Details (Demo Data)</h3>
+    <ul>
+      <li><strong>Founded:</strong> 1978 (fictional)</li>
+      <li><strong>Employees (2024):</strong> ~220,000</li>
+      <li><strong>Revenue (2024):</strong> USD $125.8 billion</li>
+      <li><strong>Net Income (2024):</strong> USD $25.6 billion</li>
+      <li><strong>Main Segments:</strong> Cloud & Infrastructure, Productivity & Collaboration,
+          Devices & Edge, AI & Platform Services, Enterprise Solutions</li>
+      <li><strong>Notable Products:</strong> Codentis Cloud, Codentis Office 365, Codentis Teams,
+          <em>Codentis Assist</em> (AI co-pilot), Surface Holographic devices</li>
+    </ul>
+
+    <h3>Example Questions to Try</h3>
+    <ul>
+      <li>“Summarize Codentis’s 2024 financial performance.”</li>
+      <li>“What is Codentis Assist and when did it launch?”</li>
+      <li>“List Codentis’s business segments and their revenue share.”</li>
+      <li>“Where did Codentis expand its cloud regions in 2024?”</li>
+      <li>“What is Surface Holographic 2?”</li>
+    </ul>
+  </section>
+</main>
+<!-- Chat overlay component -->
+<app-chat></app-chat>

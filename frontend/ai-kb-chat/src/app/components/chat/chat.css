@@ -1,0 +1,257 @@
+/* Floating chat icon (FAB) */
+.chat-icon {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: 56px;
+  height: 56px;
+  background-color: #0d47a1;      /* FAB is the blue circle */
+  color: #fff;
+  border: 0;
+  border-radius: 9999px;          /* perfect circle */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,.30);
+  z-index: 1000;
+  padding: 0;                     /* remove default button padding */
+  line-height: 0;                 /* kill inline-svg whitespace */
+}
+
+.chat-icon__svg {
+  width: 28px;                    /* lock size */
+  height: 28px;
+  display: block;                 /* no inline gaps */
+  pointer-events: none;           /* clicks go to the button */
+}
+
+/* Chat panel (anchored bottom-right; expands up/left by changing width/height) */
+.chat-panel {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1100;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 600px;
+  min-height: 360px;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+/* Edge resize handles */
+.resize-handle {
+  position: absolute;
+  z-index: 2;
+  background: transparent;
+  opacity: 0.75;
+  transition: opacity 120ms ease, background 120ms ease;
+  pointer-events: auto; /* ensure draggable */
+}
+
+/* Top edge: drag vertically (ns-resize) */
+.resize-handle.top {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 12px;          /* slightly thicker for easier grab */
+  cursor: ns-resize;
+}
+.resize-handle.top:hover { opacity: 1; }
+
+/* Left edge: drag horizontally (ew-resize) */
+.resize-handle.left {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 12px;           /* slightly thicker for easier grab */
+  cursor: ew-resize;
+}
+.resize-handle.left:hover { opacity: 1; }
+
+/* Visible “grip” cues: double lines using pseudo-elements */
+.resize-handle.top::before,
+.resize-handle.left::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+/* Top grip: horizontal double lines, centered */
+.resize-handle.top::before {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 3px;
+  width: 48px;           /* grip length */
+  height: 6px;
+  border-radius: 2px;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.35)) 0 0 / 100% 2px no-repeat,
+    linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.35)) 0 100% / 100% 2px no-repeat;
+}
+
+/* Left grip: vertical double lines, centered */
+.resize-handle.left::before {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 3px;
+  width: 6px;
+  height: 48px;          /* grip length */
+  border-radius: 2px;
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.35), rgba(0,0,0,0.35)) 0 0 / 2px 100% no-repeat,
+    linear-gradient(to right, rgba(0,0,0,0.35), rgba(0,0,0,0.35)) 100% 0 / 2px 100% no-repeat;
+}
+
+/* Header */
+.chat-header {
+  background-color: #0d47a1;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chat-header .title {
+  font-weight: bold;
+}
+.close-button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* Body */
+.chat-body {
+  flex: 1;
+  padding: 0.5rem 0.5rem 0.75rem 0.75rem;
+  overflow-y: auto;
+  background: #f7f7f7;
+}
+
+.message-row {
+  margin-bottom: 0.75rem;
+  display: flex;
+}
+.message-row.user {
+  justify-content: flex-end;
+}
+.message-row.assistant {
+  justify-content: flex-start;
+}
+.bubble {
+  max-width: 80%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 12px;
+  background: #e3f2fd;
+  color: #0d47a1;
+  position: relative;
+}
+.message-row.user .bubble {
+  background: #0d47a1;
+  color: #fff;
+}
+.bubble .timestamp {
+  display: block;
+  font-size: 0.7rem;
+  margin-top: 0.25rem;
+  opacity: 0.7;
+  text-align: right;
+}
+
+/* Input */
+.chat-input {
+  display: flex;
+  padding: 0.5rem;
+  border-top: 1px solid #ddd;
+  background: #fff;
+}
+.chat-input input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+.chat-input button {
+  background-color: #0d47a1;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.chat-input button:hover {
+  background-color: #08306b;
+}
+/* --- Chat icon pulse: box-shadow on/off every 2s --- */
+.chat-icon {
+  /* keep your existing styles */
+  animation: chatPulse 2s infinite ease-in-out;
+  will-change: box-shadow;
+}
+
+@keyframes chatPulse {
+  0%, 100% {
+    /* base drop shadow only */
+    box-shadow:
+      0 4px 8px rgba(0, 0, 0, 0.30),
+      0 0 0 0 rgba(13, 71, 161, 0);
+  }
+  50% {
+    /* add a glowing ring */
+    box-shadow:
+      0 4px 8px rgba(0, 0, 0, 0.30),
+      0 0 22px 8px rgba(13, 71, 161, 0.55);
+  }
+}
+.chat-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
+  background: #fafafa;
+}
+
+.chat-suggestions .pill {
+  appearance: none;
+  border: 1px solid #c5d8ff;
+  background: #eaf2ff;
+  color: #0d47a1;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: box-shadow 160ms ease, transform 80ms ease, background 160ms ease;
+  white-space: nowrap;
+}
+
+.chat-suggestions .pill:hover {
+  background: #dbe9ff;
+  box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.12);
+}
+
+.chat-suggestions .pill:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 480px) {
+  .chat-suggestions {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 12px;
+  }
+  .chat-suggestions .pill {
+    flex: 0 0 auto;
+  }
+}
