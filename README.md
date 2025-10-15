@@ -12,8 +12,8 @@
 | ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3-green?logo=springboot&logoColor=white) | Backend REST API layer |
 | ![Java](https://img.shields.io/badge/Java-17-blue?logo=openjdk&logoColor=white) | Core business logic |
 | ![AWS Bedrock](https://img.shields.io/badge/AWS-Bedrock-orange?logo=amazonaws&logoColor=white) | Foundation model access layer |
-| ![Knowledge Base Retrieval API](https://img.shields.io/badge/Knowledge%20Base-Retrieval-API-yellow?logo=amazonaws&logoColor=black) | Retrieves contextually relevant data |
-| ![Amazon S3 Vector Store (Preview)](https://img.shields.io/badge/Amazon%20S3-Vector%20Store-Preview-brown?logo=amazonaws&logoColor=white) | Vector embeddings & document storage |
+| ![Knowledge Base Retrieval API](https://img.shields.io/badge/Knowledge%20Base-Retrieval%20API-yellow?logo=amazonaws&logoColor=black) | Retrieves contextually relevant data |
+| ![Amazon S3 Vector Store (Preview)](https://img.shields.io/badge/Amazon%20S3-Vector%20Store%20Preview-795548?logo=amazonaws&logoColor=white) | Vector embeddings & document storage |
 | ![AWS Lambda](https://img.shields.io/badge/AWS-Lambda-f79400?logo=awslambda&logoColor=white) | Serverless runtime |
 | ![API Gateway](https://img.shields.io/badge/API-Gateway-maroon?logo=amazonaws&logoColor=white) | API exposure & routing |
 | ![CloudFront](https://img.shields.io/badge/AWS-CloudFront-purple?logo=amazonaws&logoColor=white) | Secure global distribution |
